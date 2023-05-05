@@ -1,0 +1,31 @@
+bilets = int(input('Введите количество билетов:'))
+age = int(input('Введите Ваш возраст:'))
+price = [990,1390]
+for values in price:
+     one = (price)[0:1]
+     two = (price)[1:2]
+odin = int(''.join(map(str, one)))
+dwa = int(''.join(map(str, two)))
+
+if age <= 18:
+     print('Бесплатно')
+
+if 18 < age < 25:
+    if bilets <=2:
+        summa = (odin * bilets)
+
+    if bilets >= 3:
+        summa = (odin* bilets)-(odin* bilets) / 100 * 10
+
+    print('Cумма за билет:990')
+    print('Сумма за все выбранные билеты:',int(summa))
+
+if age > 25:
+    if bilets <=2:
+        summa = (dwa * bilets)
+
+    if bilets >= 3:
+        summa = (dwa* bilets)-(dwa* bilets) / 100 * 10
+
+    print('Cумма за билет:990')
+    print('Сумма за все выбранные билеты:',int(summa))
